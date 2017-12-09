@@ -38,7 +38,7 @@ mongoose.connect("mongodb://heroku_5qv8l941:purp4prez@ds133746.mlab.com:33746/he
 // A GET route for scraping the echojs website
 app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with request
-  axios.get("http://reddit.com/r/WTF").then(function(response) {
+  axios.get("https://reddit.com/r/WTF").then(function(response) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(response.data);
 
